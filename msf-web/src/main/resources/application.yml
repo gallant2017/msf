@@ -5,3 +5,7 @@ spring:
       active: dev
       js-version: 2018091000777
       css-version: 201809101335
+  #模板引擎
+  freemarker:
+    template-loader-path: classpath:/templates/
+    settings-classic-compatible: true

@@ -18,6 +18,7 @@
         <module>msf-dao</module>
         <module>msf-services</module>
         <module>msf-web</module>
+        <module>msf-entity</module>
     </modules>
 
 
