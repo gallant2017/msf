@@ -1,0 +1,11 @@
+server:
+  port: 3334
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/msf
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    test-on-borrow: false
+    test-while-idle: false

@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: msf-web
+  profiles:
+      active: dev
+      js-version: 2018091000777
+      css-version: 201809101335
