@@ -62,7 +62,7 @@
 </div>
 
 <div>
-    <img class="loading" src="http://imageqiniu.laosiji.com/FqEvXRlxo8Ir1SMFu8Lc0IkZtUj5">
+    <img  class="loading" src="/images/loading.gif">
 </div>
 <div class='footer'>
     <a href="/">
