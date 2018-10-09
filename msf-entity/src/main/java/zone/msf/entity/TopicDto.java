@@ -8,6 +8,7 @@ public class TopicDto {
     private int id;
     private String title;
     private String coverImgUrl;
+    private String createdOn;
 
     public int getId() {
         return id;
@@ -31,5 +32,13 @@ public class TopicDto {
 
     public void setCoverImgUrl(String coverImgUrl) {
         this.coverImgUrl = coverImgUrl;
+    }
+
+    public String getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(String createdOn) {
+        this.createdOn = createdOn;
     }
 }

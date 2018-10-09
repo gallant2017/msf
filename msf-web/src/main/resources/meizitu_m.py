@@ -2,15 +2,15 @@ from bs4 import BeautifulSoup
 import urllib.request
 import pymysql
 import re
-import os 
+import os
 
 def reptile(url):
-	
+
 	response = urllib.request.urlopen(url).read().decode('gbk')
 	soup = BeautifulSoup(response,'html.parser')#创建对象
 	title=soup.find("title").text
 	imgs= soup.find("div", attrs={"id": "picture"}).find_all("img")
-	
+
 	conn = pymysql.connect(host="127.0.0.1", user="root",password="root",database="msf",charset="utf8")
 	cursor = conn.cursor()
 
@@ -37,5 +37,7 @@ def reptile(url):
 	cursor.close()
 	conn.close()
 
-reptile("http://m.meizitu.com/a/5462.html")
-
+i=5462
+while i>5400:
+	reptile("http://m.meizitu.com/a/{}.html".format(i))
+	i-=1

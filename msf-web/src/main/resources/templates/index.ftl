@@ -11,6 +11,7 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="keywords" content="美少妇，msf，msf.zone,少妇">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <script>
         //是否为pc
         function IsPC() {
@@ -40,42 +41,24 @@
     <img class="logo" src="/images/logo.png">
 </div>
 <div class="feed clearfix">
-    <div class="left">
+
     <#list lst as item>
         <a href="/thread/${item.id?c}">
-            <div class="item statistic_item">
-                <div class="imgBox" style="height: 11.35rem">
+            <div class="item">
+                <div class="imgBox" style="height: 6.35rem">
                     <img class="img lazy"
                          src="${(item.coverImgUrl)!}"
                          alt="${item.title}"></div>
                 <div class="content"><p class="title">${item.title}</p>
-                    <div class="user"><img class="head"
-                                           src="http://imageqiniu.laosiji.com/Fg8RdysktTeeSbDYk4zjXnI-5I1A?imageMogr2/auto-orient/thumbnail/!40x40r/gravity/Center/crop/40x40/quality/100"
-                                           alt=""> <span>达芙妮</span></div>
+
+                    <div class="pub"><span>${item.createdOn?date('yyyy-MM-dd')}</span> </div>
                     <div class="like"><i></i><span>100</span></div>
                 </div>
             </div>
         </a>
     </#list>
-    </div>
-    <div class="right">
-    <#list lst as item>
-        <a href="/thread/${item.id?c}">
-            <div class="item statistic_item">
-                <div class="imgBox" style="height: 11.35rem">
-                    <img class="img lazy"
-                         src="${(item.coverImgUrl)!}"
-                         alt="${item.title}"></div>
-                <div class="content"><p class="title">${item.title}</p>
-                    <div class="user"><img class="head"
-                                           src="http://imageqiniu.laosiji.com/Fg8RdysktTeeSbDYk4zjXnI-5I1A?imageMogr2/auto-orient/thumbnail/!40x40r/gravity/Center/crop/40x40/quality/100"
-                                           alt=""> <span>达芙妮</span></div>
-                    <div class="like"><i></i><span>100</span></div>
-                </div>
-            </div>
-        </a>
-    </#list>
-    </div>
+
+
 </div>
 
 <div>

@@ -81,17 +81,15 @@ body {
 
 .feed {
     padding: 0.6rem 0.65rem; }
-.feed .left, .feed .right {
-    width: 8.5rem;
-    display: inline-block;
-    float: left; }
-.feed .left {
-    margin-right: 0.45rem; }
+
 .feed .item {
+    width: 8.4rem;
+    float: left;
     background: white;
     color: RGBA(0, 0, 0, 0.87);
     border-radius: 4px;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5rem;
+    margin-left: 0.2rem;}
 .feed .item .imgBox {
     position: relative;
     min-height: 6.35rem; }
@@ -129,25 +127,14 @@ body {
     padding: 0; }
 .feed .item .content .title img {
     height: 0.7rem; }
-.feed .item .content .user {
+.feed .item .content .pub {
     margin-bottom: 0.2rem;
     height: 1rem; }
-.feed .item .content .user .head {
-    height: 1rem;
-    width: 1rem;
-    margin-right: 0.2rem;
-    border-radius: 50%;
-    float: left; }
-.feed .item .content .user span {
-    display: inline-block;
-    width: 3.9rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.feed .item .content .pub span {
     font-size: 0.55rem;
+    color: rgba(0, 0, 0, 0.54);
     float: left;
-    line-height: 1rem;
-    font-weight: bold; }
+    line-height: 1rem;}
 .feed .item .content .like {
     display: inline-block;
     position: absolute;
@@ -288,13 +275,12 @@ body {
 body .header {
     height: 2.5rem;
     width: 100%;
-    background: white;
     position: fixed;
     left: 0;
     top: 0;
+    background: white;
     z-index: 100; }
 body .header img {
-    width: 4.5rem;
-    height: 1.7rem;
+    height: 2.4rem;
     display: block;
-    margin: 0.5rem auto; }
+    margin-left: 0.5rem; }

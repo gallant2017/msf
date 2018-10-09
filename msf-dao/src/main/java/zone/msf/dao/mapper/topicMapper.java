@@ -14,7 +14,7 @@ import java.util.List;
 @Mapper
 public interface TopicMapper {
 
-     @Select("select id,title from topic")
+     @Select("select id,title,createdOn from topic")
      List<TopicDto> getTopicList();
 
      @Select("select id,topic_id,url,memo1,view_count,createdOn from topic_img where topic_id=#{topic_id}")

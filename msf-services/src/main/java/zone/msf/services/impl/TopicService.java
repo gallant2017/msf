@@ -25,7 +25,8 @@ public class TopicService implements ITopicService {
                 lst) {
             List<TopicImgDto> lstImg= topicMapper.GetTopicImgsByTopicId(dto.getId());
             if (lstImg.size()>0) {
-                dto.setCoverImgUrl("/images/"+lstImg.get(0).getUrl());
+                //dto.setCoverImgUrl("/images/"+lstImg.get(0).getUrl());
+                dto.setCoverImgUrl("/images/img/11.jpg");
             }
         }
         return lst;
