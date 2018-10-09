@@ -25,7 +25,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
+.images/img/
 ### log ###
 logback-logs/
 *.log

@@ -30,7 +30,7 @@ public class HomeController extends BaseController {
      */
     @RequestMapping(value="/", method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, Model model){
-        List<TopicDto> lst= topicService.test();
+        List<TopicDto> lst= topicService.getTopicList();
         model.addAttribute("lst", lst);
         return new ModelAndView("index");
     }

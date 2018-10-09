@@ -7,6 +7,7 @@ public class TopicDto {
 
     private int id;
     private String title;
+    private String coverImgUrl;
 
     public int getId() {
         return id;
@@ -22,5 +23,13 @@ public class TopicDto {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getCoverImgUrl() {
+        return coverImgUrl;
+    }
+
+    public void setCoverImgUrl(String coverImgUrl) {
+        this.coverImgUrl = coverImgUrl;
     }
 }

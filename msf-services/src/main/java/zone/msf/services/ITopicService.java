@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface ITopicService {
 
-    List<TopicDto> test();
+    List<TopicDto> getTopicList();
 }
