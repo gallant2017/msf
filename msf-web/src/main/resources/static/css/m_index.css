@@ -83,7 +83,7 @@ body {
     padding: 0.6rem 0.65rem; }
 
 .feed .item {
-    width: 8.4rem;
+    width: 17rem;
     float: left;
     background: #f3f3f3;
     color: RGBA(0, 0, 0, 0.87);
@@ -94,7 +94,7 @@ body {
     position: relative;
     min-height: 6.35rem; }
 .feed .item .imgBox .img {
-    width: 100%;
+    width: 16.8rem;
     height: auto;
     border-radius: 4px 4px 0 0; }
 .feed .item .imgBox .play {

@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import zone.msf.entity.TopicDto;
+import zone.msf.entity.TopicImgDto;
 import zone.msf.services.ITopicService;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -34,4 +36,18 @@ public class HomeController extends BaseController {
         model.addAttribute("lst", lst);
         return new ModelAndView("index");
     }
+
+    @RequestMapping(value="/thread", method = RequestMethod.GET)
+    public ModelAndView detail(HttpServletRequest request, Model model,
+                               @PathParam("_sid") int _sid){
+        TopicDto objTopic=topicService.getTopicById(_sid);
+        if (objTopic!=null) {
+            List<TopicImgDto> lstImg= topicService.GetTopicImgsByTopicId(_sid);
+            model.addAttribute("objTopic",objTopic);
+            model.addAttribute("lstImg", lstImg);
+            return new ModelAndView("detail");
+        }
+        return new ModelAndView("error");
+    }
+
 }

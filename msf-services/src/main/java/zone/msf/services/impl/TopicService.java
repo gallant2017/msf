@@ -19,6 +19,11 @@ public class TopicService implements ITopicService {
     TopicMapper topicMapper;
 
     @Override
+    public TopicDto getTopicById(int topicId) {
+        return topicMapper.getTopicById(topicId);
+    }
+
+    @Override
     public List<TopicDto> getTopicList() {
         List<TopicDto> lst= topicMapper.getTopicList();
         for (TopicDto dto :
@@ -28,6 +33,16 @@ public class TopicService implements ITopicService {
                 dto.setCoverImgUrl("/images/"+lstImg.get(0).getUrl());
                 //dto.setCoverImgUrl("/images/img/11.jpg");
             }
+        }
+        return lst;
+    }
+
+    @Override
+    public List<TopicImgDto> GetTopicImgsByTopicId(int topicId) {
+        List<TopicImgDto> lst= topicMapper.GetTopicImgsByTopicId(topicId);
+        for (TopicImgDto dto
+                : lst) {
+            dto.setUrl("/images/"+dto.getUrl());
         }
         return lst;
     }

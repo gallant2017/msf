@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>msf.zone</title>
+    <title>${objTopic.title}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -11,7 +11,7 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="keywords" content="美少妇，msf，msf.zone,少妇">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <script>
         //是否为pc
         function IsPC() {
@@ -38,31 +38,31 @@
 </head>
 <body>
 <div class='header'>
-    <img class="logo" src="/images/logo.png">
+    <a href="/">
+    <img class="logo" src="/images/logo.png"></a>
 </div>
 <div class="feed clearfix">
-
-<#list lst as item>
-    <a href="/thread?_sid=${item.id?c}">
+    <div class="item">
+        <div class="content"><p class="title">${objTopic.title}</p>
+            <div class="pub"><span>${objTopic.createdOn?datetime('yyyy-MM-dd HH:mm')}</span></div>
+        </div>
+    </div>
+<#list lstImg as item>
+    <a href="#">
         <div class="item">
             <div class="imgBox">
                 <img class="img lazy"
-                     src="${(item.coverImgUrl)!}"
-                     alt="${item.title}"></div>
-            <div class="content"><p class="title">${item.title}</p>
+                     src="${(item.url)!}"
+                     alt="${item.memo1}"></div>
+            <div class="content"><p class="title">${item.memo1}</p>
 
-                <div class="pub"><span>${item.createdOn?date('yyyy-MM-dd')}</span></div>
-            <#--<div class="like"><i></i><span>100</span></div>-->
+                <#--<div class="pub"><span></span> </div>-->
+                <#--<div class="like"><i></i><span>100</span></div>-->
             </div>
         </div>
     </a>
 </#list>
 
-
-</div>
-
-<div>
-    <img class="loading" src="/images/loading.gif">
 </div>
 <div class='footer'>
     <a href="/">
@@ -100,9 +100,7 @@
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
-
 </script>
-<script src="/js/m_index.js"></script>
 </body>
 
 </html>
