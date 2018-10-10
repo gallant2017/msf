@@ -20,7 +20,7 @@ public interface TopicMapper {
      @Select("select id,title,createdOn from topic")
      List<TopicDto> getList();
 
-     @Select("select id,title,createdOn from topic where is_show_index=1 and is_del=0 " +
+     @Select("select id,title,category_id,createdOn from topic where is_show_index=1 and is_del=0 " +
              " and id<=(select id from topic where is_show_index=1 and is_del=0 order by id desc limit #{offset},1) " +
              " order by id desc limit #{pageSize}")
      List<TopicDto> getPageList(@Param("offset")int offset,@Param("pageSize")int pageSize);

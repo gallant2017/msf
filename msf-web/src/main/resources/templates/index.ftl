@@ -38,29 +38,9 @@
 </head>
 <body>
 <div class='header'>
-    <img class="logo" src="/images/logo.png">
+    <#--<img class="logo" src="/images/logo.png">-->
 </div>
-<div class="feed clearfix">
-
-<#--<#list lst as item>-->
-    <#--<a href="/thread?_sid=${item.id?c}">-->
-        <#--<div class="item">-->
-            <#--<div class="imgBox">-->
-                <#--<img class="img lazy"-->
-                     <#--src="${(item.coverImgUrl)!}"-->
-                     <#--alt="${item.title}"></div>-->
-            <#--<div class="content"><p class="title">${item.title}</p>-->
-
-                <#--<div class="pub"><span>${item.createdOn?date('yyyy-MM-dd')}</span></div>-->
-            <#--&lt;#&ndash;<div class="like"><i></i><span>100</span></div>&ndash;&gt;-->
-            <#--</div>-->
-        <#--</div>-->
-    <#--</a>-->
-<#--</#list>-->
-
-
-</div>
-
+<div class="feed clearfix"></div>
 <div>
     <img class="loading" style="display: none" src="/images/loading.gif">
 </div>
@@ -70,20 +50,20 @@
             <div class="home active"></div>
             <p>首页</p></div>
     </a>
-    <a href="/hotshow/index.html">
+    <a href="/category">
         <div class='tab'>
-            <div class="program"></div>
-            <p>类别1</p></div>
+            <div class="dis"></div>
+            <p>品味</p></div>
     </a>
     <a href="/car/brand/index.html">
         <div class='tab'>
             <div class="car"></div>
-            <p>类别2</p></div>
+            <p>段子</p></div>
     </a>
     <a href="javaScript:;">
         <div class='tab'>
             <div class="app"></div>
-            <p>客户端</p></div>
+            <p>收藏</p></div>
     </a>
 </div>
 <script>
