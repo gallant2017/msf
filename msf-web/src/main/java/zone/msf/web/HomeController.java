@@ -20,7 +20,6 @@ import java.util.List;
  */
 
 @Controller
-@ResponseBody
 public class HomeController extends BaseController {
 
     @Autowired
@@ -28,22 +27,23 @@ public class HomeController extends BaseController {
 
     /**
      * 首页
+     *
      * @return
      */
-    @RequestMapping(value="/", method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest request, Model model){
-        List<TopicDto> lst= topicService.getTopicList();
-        model.addAttribute("lst", lst);
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView index(HttpServletRequest request, Model model) {
+        //List<TopicDto> lst = topicService.getList();
+        //model.addAttribute("lst", lst);
         return new ModelAndView("index");
     }
 
-    @RequestMapping(value="/thread", method = RequestMethod.GET)
+    @RequestMapping(value = "/thread", method = RequestMethod.GET)
     public ModelAndView detail(HttpServletRequest request, Model model,
-                               @PathParam("_sid") int _sid){
-        TopicDto objTopic=topicService.getTopicById(_sid);
-        if (objTopic!=null) {
-            List<TopicImgDto> lstImg= topicService.GetTopicImgsByTopicId(_sid);
-            model.addAttribute("objTopic",objTopic);
+                               @PathParam("_sid") int _sid) {
+        TopicDto objTopic = topicService.getObjById(_sid);
+        if (objTopic != null) {
+            List<TopicImgDto> lstImg = topicService.getImgsByTopicId(_sid);
+            model.addAttribute("objTopic", objTopic);
             model.addAttribute("lstImg", lstImg);
             return new ModelAndView("detail");
         }

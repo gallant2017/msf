@@ -10,9 +10,17 @@ import java.util.List;
  */
 public interface ITopicService {
 
-    TopicDto getTopicById(int topicId);
+    /**
+     * 获取首页列表
+     * @return
+     */
+    List<TopicDto> getIndexTopicList(int pageIndex,int pageSize);
 
-    List<TopicDto> getTopicList();
+    TopicDto getObjById(int topicId);
 
-    List<TopicImgDto> GetTopicImgsByTopicId(int topicId);
+    List<TopicDto> getList();
+
+    List<TopicDto> getPageList(int pageIndex,int pageSize);
+
+    List<TopicImgDto> getImgsByTopicId(int topicId);
 }

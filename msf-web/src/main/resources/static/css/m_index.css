@@ -5,7 +5,9 @@
 
 body {
     font-family: "PingFang SC", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", STHeiTi, sans-serif; }
-
+.fn-hide{
+    display:none;
+}
 .go-home {
     display: block;
     color: white;

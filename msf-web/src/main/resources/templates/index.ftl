@@ -42,27 +42,27 @@
 </div>
 <div class="feed clearfix">
 
-<#list lst as item>
-    <a href="/thread?_sid=${item.id?c}">
-        <div class="item">
-            <div class="imgBox">
-                <img class="img lazy"
-                     src="${(item.coverImgUrl)!}"
-                     alt="${item.title}"></div>
-            <div class="content"><p class="title">${item.title}</p>
+<#--<#list lst as item>-->
+    <#--<a href="/thread?_sid=${item.id?c}">-->
+        <#--<div class="item">-->
+            <#--<div class="imgBox">-->
+                <#--<img class="img lazy"-->
+                     <#--src="${(item.coverImgUrl)!}"-->
+                     <#--alt="${item.title}"></div>-->
+            <#--<div class="content"><p class="title">${item.title}</p>-->
 
-                <div class="pub"><span>${item.createdOn?date('yyyy-MM-dd')}</span></div>
-            <#--<div class="like"><i></i><span>100</span></div>-->
-            </div>
-        </div>
-    </a>
-</#list>
+                <#--<div class="pub"><span>${item.createdOn?date('yyyy-MM-dd')}</span></div>-->
+            <#--&lt;#&ndash;<div class="like"><i></i><span>100</span></div>&ndash;&gt;-->
+            <#--</div>-->
+        <#--</div>-->
+    <#--</a>-->
+<#--</#list>-->
 
 
 </div>
 
 <div>
-    <img class="loading" src="/images/loading.gif">
+    <img class="loading" style="display: none" src="/images/loading.gif">
 </div>
 <div class='footer'>
     <a href="/">

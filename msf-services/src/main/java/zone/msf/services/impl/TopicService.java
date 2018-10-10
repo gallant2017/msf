@@ -18,31 +18,52 @@ public class TopicService implements ITopicService {
     @Autowired
     TopicMapper topicMapper;
 
+
     @Override
-    public TopicDto getTopicById(int topicId) {
-        return topicMapper.getTopicById(topicId);
+    public List<TopicDto> getIndexTopicList(int pageIndex, int pageSize) {
+        return null;
     }
 
     @Override
-    public List<TopicDto> getTopicList() {
-        List<TopicDto> lst= topicMapper.getTopicList();
-        for (TopicDto dto :
-                lst) {
-            List<TopicImgDto> lstImg= topicMapper.GetTopicImgsByTopicId(dto.getId());
-            if (lstImg.size()>0) {
-                dto.setCoverImgUrl("/images/"+lstImg.get(0).getUrl());
-                //dto.setCoverImgUrl("/images/img/11.jpg");
-            }
+    public TopicDto getObjById(int topicId) {
+        return topicMapper.getObjById(topicId);
+    }
+
+    @Override
+    public List<TopicDto> getList() {
+        List<TopicDto> lst= topicMapper.getList();
+        return fixList(lst);
+    }
+
+    @Override
+    public List<TopicDto> getPageList(int pageIndex, int pageSize) {
+        int offset = (pageIndex - 1) * pageSize;
+        List<TopicDto> lst= topicMapper.getPageList(offset,pageSize);
+        return fixList(lst);
+    }
+
+    @Override
+    public List<TopicImgDto> getImgsByTopicId(int topicId) {
+        List<TopicImgDto> lst= topicMapper.GetImgsByTopicId(topicId);
+        for (TopicImgDto dto
+                : lst) {
+            //dto.setUrl("/images/"+dto.getUrl());
+            //dto.setMemo1("test");
+            dto.setUrl("/images/img/11.jpg");
+
         }
         return lst;
     }
 
-    @Override
-    public List<TopicImgDto> GetTopicImgsByTopicId(int topicId) {
-        List<TopicImgDto> lst= topicMapper.GetTopicImgsByTopicId(topicId);
-        for (TopicImgDto dto
-                : lst) {
-            dto.setUrl("/images/"+dto.getUrl());
+    private List<TopicDto> fixList(List<TopicDto> lst){
+        for (TopicDto dto :
+                lst) {
+            List<TopicImgDto> lstImg= topicMapper.GetImgsByTopicId(dto.getId());
+            if (lstImg.size()>0) {
+                dto.setCoverImgUrl("/images/"+lstImg.get(0).getUrl());
+                //dto.setTitle("test");
+                //dto.setCoverImgUrl("/images/img/11.jpg");
+            }
         }
         return lst;
     }

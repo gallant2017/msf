@@ -14,9 +14,17 @@ import java.util.List;
 @Mapper
 public interface TopicMapper {
 
+     @Select("select id,title,createdOn from topic where id=#{topic_id}")
+     TopicDto getObjById(@Param("topic_id")int topic_id);
+
      @Select("select id,title,createdOn from topic")
-     List<TopicDto> getTopicList();
+     List<TopicDto> getList();
+
+     @Select("select id,title,createdOn from topic where is_show_index=1 and is_del=0 " +
+             " and id<=(select id from topic where is_show_index=1 and is_del=0 order by id desc limit #{offset},1) " +
+             " order by id desc limit #{pageSize}")
+     List<TopicDto> getPageList(@Param("offset")int offset,@Param("pageSize")int pageSize);
 
      @Select("select id,topic_id,url,memo1,view_count,createdOn from topic_img where topic_id=#{topic_id}")
-     List<TopicImgDto> GetTopicImgsByTopicId(@Param("topic_id")int topic_id);
+     List<TopicImgDto> GetImgsByTopicId(@Param("topic_id")int topic_id);
 }

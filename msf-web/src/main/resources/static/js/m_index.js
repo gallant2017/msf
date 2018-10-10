@@ -1,8 +1,10 @@
 ({
     init: function () {
         var me = this;
-        me.page = 1;
-        me.load = 1;
+        me.p = 1;
+        me.s = 5;
+        me.isLoading = false;
+        me.hasMore = true;
         me.event();
     },
     event: function () {
@@ -11,60 +13,69 @@
     },
     getList: function () { //圈子sns列表
         var me = this;
-        var me = this;
+
         $.ajax({
-            type: "post",
+            type: "get",
             url: "/api/feed/list",
             data: {
-                pageNo: me.page,
-                pageSize:5
+                p: me.p,
+                s: me.s
             },
             async: true,
-            success: function (res) {
-                me.pageCount = res.body.sns.pagecount;
-                var snsList = res.body.sns.list;
-                $(".loading").hide();
-                if(snsList.length!=0){
-                    me.dealSnsListData(snsList);
+            beforeSend:function () {
+                me.isLoading = true;
+                $(".loading").show()
+            },
+            success: function (data) {
+                if (data.code == 0) {
+                    me.bindData(data.obj);
+                } else {
+                    me.hasMore = false;
                 }
+            },
+            complete: function () {
+                me.isLoading = false;
+
             }
         });
     },
-    //去重
-    dealSnsListData: function (snsList) {
-
-        me.comListStr(res)
-    },
-    comListStr: function (list) {
+    bindData: function (lst) {
         var me = this;
+        if (lst.length>0) {
+            var lsthtml="";
+            $.each(lst, function (i, item) {
+                lsthtml += "<a href=\"/thread?_sid=" + item.id + "\">";
+                lsthtml += "<div class=\"item\">";
 
-        me.page++;
-        if( me.getCom == 1){
+                lsthtml += "<div class=\"imgBox\">";
+                lsthtml += "<img class=\"img lazy\" src=\"" + item.coverImgUrl + "\" alt=\"" + item.title + "\">";
+                lsthtml += "</div>";
+
+                lsthtml += "<div class=\"content\">";
+                lsthtml += "<p class=\"title\">" + item.title + "</p>";
+                lsthtml += "<div class=\"pub\"><span>" + item.createdOn + "</span></div>"
+                lsthtml += "</div>";
+
+                lsthtml += "</div>";
+                lsthtml += "</a>"
+            });
+            $(".feed").append(lsthtml);
+            $(".loading").hide();
+        }
+        if (lst.length < me.s) {
+            me.hasMore = false;
+        }
+        if (me.p == 1) {
             $(window).scroll(function () {
-                if($(document).height()-$(window).scrollTop()-window.screen.height<=200&&me.load == 1){
-                    $(".loading").show();
-                    me.getList();
-                    me.load = 2;
+                var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+                if (($(document).height() - 30) <= totalheight) {
+                    if (me.hasMore && !me.isLoading) {
+                        me.getList();
+                    }
                 }
             });
-
-
-
         }
-
-    },
-
-    getParam:function (num) {
-        var path =  location.pathname;
-        path = path.substring(0,path.length-5);
-        var arr = path.split('/');
-        return arr[arr.length-num];
-    },
-    getUrlParms:function(name){
-        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-        var r = window.location.search.substr(1).match(reg);
-        if(r!=null)
-            return unescape(r[2]);
-        return null;
+        $(".loading").hide();
+        me.p++;
     }
 }).init();
