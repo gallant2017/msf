@@ -280,3 +280,14 @@ body .header img {
     height: 2.4rem;
     display: block;
     margin-left: 0.5rem; }
+
+body .category li{
+    float: left;
+    margin: 10px;
+    width: 7em;
+    align-content: center;
+    background: #f3f3f3;
+    padding: 1em;
+    text-align: center;
+    color: #f75d84;
+}

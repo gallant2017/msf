@@ -52,7 +52,7 @@ public class HomeController extends BaseController {
             List<TopicImgDto> lstImg = topicService.getImgsByTopicId(_sid);
             model.addAttribute("objTopic", objTopic);
             model.addAttribute("lstImg", lstImg);
-            return new ModelAndView("detail");
+            return new ModelAndView("m/detail");
         }
         return new ModelAndView("error");
     }

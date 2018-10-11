@@ -19,7 +19,14 @@
 <body>
 <#include "common/header.ftl">
 <div class="feed clearfix">
-    品味正在建设中... 请稍等.
+    <div>
+        <ul class="category">
+            <li>分类1</li>
+            <li>分类2</li>
+            <li>分类3</li>
+            <li>分类4</li>
+        </ul>
+    </div>
 </div>
 <div class='footer'>
     <a href="/">

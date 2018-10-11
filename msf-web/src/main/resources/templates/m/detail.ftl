@@ -46,8 +46,8 @@
     <a href="#">
         <div class="item">
             <div class="imgBox">
-                <img class="img lazy"
-                     src="${(item.url)!}"
+                <img class="img lazy" lazysrc="${item.url}"
+                     src="/images/x.jpg"
                      alt="${item.memo1}"></div>
             <#--<div class="content">-->
                 <#--&lt;#&ndash;<p class="title">${item.memo1}</p>&ndash;&gt;-->
@@ -60,6 +60,7 @@
 </div>
 <a href="/" class="go-home">返回首页</a>
 <script src="/js/common.js"></script>
+<script src="/js/z.js"></script>
 </body>
 
 </html>
