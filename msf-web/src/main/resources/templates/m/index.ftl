@@ -37,9 +37,7 @@
     <link href="css/m_index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div class='header'>
-    <#--<img class="logo" src="/images/logo.png">-->
-</div>
+<#include "common/header.ftl">
 <div class="feed clearfix"></div>
 <div>
     <img class="loading" style="display: none" src="/images/loading.gif">
@@ -48,41 +46,26 @@
     <a href="/">
         <div class='tab'>
             <div class="home active"></div>
-            <p>首页</p></div>
+            <p class="active">首页</p></div>
     </a>
     <a href="/category">
         <div class='tab'>
             <div class="dis"></div>
             <p>品味</p></div>
     </a>
-    <a href="/car/brand/index.html">
+    <a href="/novel">
         <div class='tab'>
-            <div class="car"></div>
+            <div class="novel"></div>
             <p>段子</p></div>
     </a>
-    <a href="javaScript:;">
+    <a href="/collecting">
         <div class='tab'>
             <div class="app"></div>
             <p>收藏</p></div>
     </a>
 </div>
-<script>
-    (function (doc, win) {
-        var docEl = doc.documentElement,
-                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                recalc = function () {
-                    var clientWidth = docEl.clientWidth;
-                    var clientHeight = docEl.clientHeight;
-                    if (!clientWidth) return;
-                    docEl.style.cssText = 'font-size:' + 20 * (clientWidth / 375) + 'px !important';
-                };
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-        doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
-
-</script>
 <script src="/js/m_index.js"></script>
+<script src="/js/common.js"></script>
 </body>
 
 </html>

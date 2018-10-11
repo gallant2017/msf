@@ -16,7 +16,7 @@ body {
     height: 1.7rem;
     text-align: center;
     line-height: 1.7rem;
-    background: RGBA(64, 64, 64, 1);
+    background: #e86e78;
     box-shadow: 0px 0px 6px 0px #cccccc;
     border-radius: 0.85rem 0 0 0.85rem;
     position: fixed;
@@ -227,9 +227,9 @@ body {
     margin-bottom: 0.25rem;
     background: url("/images/home.png");
     background-size: 100% 100%; }
-.footer .tab .home.active {
-    /*background: url("http://m.laosiji.com/static/imgs/index/homeA.png");*/
-    background-size: 100% 100%; }
+.footer .tab .active {
+    color: #f75d84;
+    font-weight: bold;}
 .footer .tab .dis {
     margin: 0 auto;
     height: 1.1rem;
@@ -238,30 +238,24 @@ body {
     background: url("/images/dis.png");
     background-size: 100% 100%; }
 .footer .tab .program.active {
-    /*background: url("http://m.laosiji.com/static/imgs/index/hotA.png");*/
     background-size: 100% 100%; }
-.footer .tab .car {
+.footer .tab .novel {
     margin: 0 auto;
     width: 1.2rem;
     height: 1.1rem;
     margin-bottom: 0.25rem;
-    background: url("http://m.laosiji.com/static/imgs/index/car.png");
-    background-size: 100% 100%; }
-.footer .tab .car.active {
-    background: url("http://m.laosiji.com/static/imgs/index/carA.png");
+    background: url("/images/book.png");
     background-size: 100% 100%; }
 .footer .tab .app {
     margin: 0 auto;
     width: 0.8rem;
     height: 1.1rem;
     margin-bottom: 0.25rem;
-    background: url("http://m.laosiji.com/static/imgs/index/app.png");
+    background: url("/images/collecting.png");
     background-size: 100% 100%; }
-.footer .tab .app.active {
-    background: url("http://m.laosiji.com/static/imgs/index/appA.png");
-    background-size: 100% 100%; }
+
 .footer .tab p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     line-height: 1;
     text-align: center; }
 .footer a:last-child {
