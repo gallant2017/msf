@@ -22,11 +22,11 @@ public class ApiController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public BaseApiResponse<List<TopicDto>> listTopic(int p, int s) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         List<TopicDto> lst = topicService.getPageList(p, s);
         return new BaseApiResponse<List<TopicDto>>(0, "", lst);
     }

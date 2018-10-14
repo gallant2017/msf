@@ -47,7 +47,7 @@
         <div class="item">
             <div class="imgBox">
                 <img class="img lazy" lazysrc="${item.url}"
-                     src="/images/x.jpg"
+                     src="/images/x.png"
                      alt="${item.memo1}"></div>
             <#--<div class="content">-->
                 <#--&lt;#&ndash;<p class="title">${item.memo1}</p>&ndash;&gt;-->
@@ -59,8 +59,8 @@
 </#list>
 </div>
 <a href="/" class="go-home">返回首页</a>
-<script src="/js/common.js"></script>
-<script src="/js/z.js"></script>
+<script src="${staticUrl}js/common.js?v=${jsVersion}"></script>
+<script src="${staticUrl}js/z.js?v=${jsVersion}"></script>
 </body>
 
 </html>

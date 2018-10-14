@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>msf.zone</title>
+    <title>美少妇图片写真,美少妇,msf.zone,好图尽在美少妇,少妇</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -42,30 +42,30 @@
 <div>
     <img class="loading" style="display: none" src="/images/loading.gif">
 </div>
-<div class='footer'>
-    <a href="/">
-        <div class='tab'>
-            <div class="home active"></div>
-            <p class="active">首页</p></div>
-    </a>
-    <a href="/category">
-        <div class='tab'>
-            <div class="dis"></div>
-            <p>品味</p></div>
-    </a>
-    <a href="/novel">
-        <div class='tab'>
-            <div class="novel"></div>
-            <p>段子</p></div>
-    </a>
-    <a href="/collecting">
-        <div class='tab'>
-            <div class="app"></div>
-            <p>收藏</p></div>
-    </a>
-</div>
-<script src="/js/m_index.js"></script>
-<script src="/js/common.js"></script>
+<#--<div class='footer'>-->
+    <#--<a href="/">-->
+        <#--<div class='tab'>-->
+            <#--<div class="home active"></div>-->
+            <#--<p class="active">首页</p></div>-->
+    <#--</a>-->
+    <#--<a href="/category">-->
+        <#--<div class='tab'>-->
+            <#--<div class="dis"></div>-->
+            <#--<p>火辣</p></div>-->
+    <#--</a>-->
+    <#--<a href="/novel">-->
+        <#--<div class='tab'>-->
+            <#--<div class="novel"></div>-->
+            <#--<p>段子</p></div>-->
+    <#--</a>-->
+    <#--<a href="/collecting">-->
+        <#--<div class='tab'>-->
+            <#--<div class="app"></div>-->
+            <#--<p>收藏</p></div>-->
+    <#--</a>-->
+<#--</div>-->
+<script src="${staticUrl}js/m_index.js?v=${jsVersion}"></script>
+<script src="${staticUrl}js/common.js?v=${jsVersion}"></script>
 </body>
 
 </html>
