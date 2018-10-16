@@ -19,9 +19,10 @@
             url: "/api/feed/list",
             data: {
                 p: me.p,
-                s: me.s
+                s: me.s,
+                c: categoryId
             },
-            async: true,
+            async: false,
             beforeSend:function () {
                 me.isLoading = true;
                 $(".loading").show()

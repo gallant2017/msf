@@ -25,6 +25,11 @@ public interface TopicMapper {
              " order by id desc limit #{pageSize}")
      List<TopicDto> getPageList(@Param("offset")int offset,@Param("pageSize")int pageSize);
 
+     @Select("select id,title,category_id,createdOn from topic where category_id=#{categoryId} and is_del=0 " +
+             " and id<=(select id from topic where category_id=#{categoryId} and is_del=0 order by id desc limit #{offset},1) " +
+             " order by id desc limit #{pageSize}")
+     List<TopicDto> getPageListByCategoryId(@Param("offset")int offset,@Param("pageSize")int pageSize,@Param("categoryId")int categoryId);
+
      @Select("select id,topic_id,url,memo1,view_count,createdOn from topic_img where topic_id=#{topic_id}")
      List<TopicImgDto> GetImgsByTopicId(@Param("topic_id")int topic_id);
 }

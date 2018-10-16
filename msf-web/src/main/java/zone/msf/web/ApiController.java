@@ -8,6 +8,7 @@ import zone.msf.entity.BaseApiResponse;
 import zone.msf.entity.TopicDto;
 import zone.msf.services.ITopicService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,13 +22,14 @@ public class ApiController {
     ITopicService topicService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public BaseApiResponse<List<TopicDto>> listTopic(int p, int s) {
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-        List<TopicDto> lst = topicService.getPageList(p, s);
+    public BaseApiResponse<List<TopicDto>> listTopic(int p, int s, int c) {
+
+        List<TopicDto> lst;
+        if (c == 0) {
+            lst = topicService.getPageList(p, s);
+        } else {
+            lst = topicService.getPageListByCategoryId(p, s, c);
+        }
         return new BaseApiResponse<List<TopicDto>>(0, "", lst);
     }
 }

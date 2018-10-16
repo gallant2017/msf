@@ -58,6 +58,20 @@
     </a>
 </#list>
 </div>
+
+<#--<div class='footer'>-->
+    <#--<a href="/">-->
+        <#--<div class='tab'>-->
+            <#--<div class="home active"></div>-->
+            <#--<p class="active">首页</p></div>-->
+    <#--</a>-->
+    <#--<a href="/category">-->
+        <#--<div class='tab'>-->
+            <#--<div class="dis"></div>-->
+            <#--<p>品味</p></div>-->
+    <#--</a>-->
+<#--</div>-->
+<#--<a href="/" class="go-home">返回首页</a>-->
 <a href="/" class="go-home">返回首页</a>
 <script src="${staticUrl}js/common.js?v=${jsVersion}"></script>
 <script src="${staticUrl}js/z.js?v=${jsVersion}"></script>

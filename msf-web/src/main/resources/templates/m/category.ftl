@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>收藏</title>
+    <title>品味-美少妇, 各种图片尽在美少妇</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -18,15 +18,63 @@
 </head>
 <body>
 <#include "common/header.ftl">
-<div class="feed clearfix">
-    <div>
-        <ul class="category">
-            <li>分类1</li>
-            <li>分类2</li>
-            <li>分类3</li>
-            <li>分类4</li>
-        </ul>
-    </div>
+<div class="category clearfix">
+    <a href="/shaofu/">
+        <div class="item">
+            <div class="imgBox">
+                <img class="img" src="/images/shaofu.jpg">
+            </div>
+            <div class="content"><p class="title">少妇</p></div>
+        </div>
+    </a>
+    <a href="/zhifu/">
+        <div class="item">
+            <div class="imgBox">
+                <img class="img" src="/images/zhifu.jpg">
+            </div>
+            <div class="content"><p class="title">制服</p></div>
+        </div>
+    </a>
+    <a href="/heisi/">
+        <div class="item">
+            <div class="imgBox">
+                <img class="img" src="/images/heisi.jpg">
+            </div>
+            <div class="content"><p class="title">黑丝</p></div>
+        </div>
+    </a>
+    <a href="/meitui/">
+        <div class="item">
+            <div class="imgBox">
+                <img class="img" src="/images/meitui.jpg">
+            </div>
+            <div class="content"><p class="title">美腿</p></div>
+        </div>
+    </a>
+    <a href="/qingchun/">
+        <div class="item">
+            <div class="imgBox">
+                <img class="img" src="/images/qingchun.jpg">
+            </div>
+            <div class="content"><p class="title">清纯</p></div>
+        </div>
+    </a>
+    <a href="/duanfa/">
+        <div class="item">
+            <div class="imgBox">
+                <img class="img" src="/images/duanfa.jpg">
+            </div>
+            <div class="content"><p class="title">短发</p></div>
+        </div>
+    </a>
+    <a href="/yushi/">
+        <div class="item">
+            <div class="imgBox">
+                <img class="img" src="/images/yushi.jpg">
+            </div>
+            <div class="content"><p class="title">浴室</p></div>
+        </div>
+    </a>
 </div>
 <div class='footer'>
     <a href="/">
@@ -38,16 +86,6 @@
         <div class='tab'>
             <div class="dis"></div>
             <p class="active">品味</p></div>
-    </a>
-    <a href="/novel">
-        <div class='tab'>
-            <div class="novel"></div>
-            <p>段子</p></div>
-    </a>
-    <a href="/collecting">
-        <div class='tab'>
-            <div class="app"></div>
-            <p>收藏</p></div>
     </a>
 </div>
 <script src="/js/common.js"></script>

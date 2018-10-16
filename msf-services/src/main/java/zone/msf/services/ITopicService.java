@@ -22,5 +22,7 @@ public interface ITopicService {
 
     List<TopicDto> getPageList(int pageIndex,int pageSize);
 
+    List<TopicDto> getPageListByCategoryId(int pageIndex,int pageSize,int categoryId);
+
     List<TopicImgDto> getImgsByTopicId(int topicId);
 }
