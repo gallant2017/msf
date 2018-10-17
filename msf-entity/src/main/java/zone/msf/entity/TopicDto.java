@@ -9,6 +9,8 @@ public class TopicDto {
     private String title;
     private String coverImgUrl;
     private String createdOn;
+    private String pub_date;
+    private int view_count;
     private int category_id;
 
     public int getId() {
@@ -49,5 +51,21 @@ public class TopicDto {
 
     public void setCreatedOn(String createdOn) {
         this.createdOn = createdOn;
+    }
+
+    public String getPub_date() {
+        return pub_date;
+    }
+
+    public void setPub_date(String pub_date) {
+        this.pub_date = pub_date;
+    }
+
+    public int getView_count() {
+        return view_count;
+    }
+
+    public void setView_count(int view_count) {
+        this.view_count = view_count;
     }
 }

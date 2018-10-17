@@ -27,4 +27,8 @@ public class BaseController {
         model.addAttribute("cssVersion", cssVersion);
         model.addAttribute("staticUrl", staticUrl);
     }
+
+    public boolean IsPc(HttpServletRequest request) {
+        return request.getRequestURL().indexOf("m.msf.zone") < 0;
+    }
 }

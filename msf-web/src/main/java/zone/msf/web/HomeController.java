@@ -32,8 +32,17 @@ public class HomeController extends BaseController {
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, Model model) {
-        model.addAttribute("categoryId",0);
-        return new ModelAndView("m/index");
+
+        if (super.IsPc(request)) {
+            List<TopicDto> mainLst = topicService.getPageList(1, 9);
+            List<TopicDto> hotLst = topicService.getHotList();
+            model.addAttribute("mainLst", mainLst);
+            model.addAttribute("hotLst", hotLst);
+            return new ModelAndView("pc/index");
+        } else {
+            model.addAttribute("categoryId", 0);
+            return new ModelAndView("m/index");
+        }
     }
 
     @RequestMapping(value = "/{category}/", method = RequestMethod.GET)

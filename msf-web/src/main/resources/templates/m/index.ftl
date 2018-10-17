@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>美少妇图片写真,美少妇,msf.zone,好图尽在美少妇,少妇|${categoryName!}</title>
+    <title>美少妇 - 好图尽在美少妇msf.zone - ${categoryName!}</title>
+    <meta name="keywords" content="美少妇,图片写真,美少妇,msf.zone,好图尽在美少妇,少妇,${categoryName!}">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
