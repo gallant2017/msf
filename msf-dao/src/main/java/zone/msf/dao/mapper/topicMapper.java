@@ -36,4 +36,8 @@ public interface TopicMapper {
 
      @Update("update topic set view_count=view_count+1 where id=#{topic_id}")
      void AddViewCount(@Param("topic_id")int topic_id);
+
+     @Select("select id,title,pub_date,view_count from topic where pub_date<=now() and is_del=0 order by view_count desc limit 5")
+     List<TopicDto> GetHotList();
+
 }
