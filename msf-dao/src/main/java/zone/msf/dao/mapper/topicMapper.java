@@ -3,6 +3,7 @@ package zone.msf.dao.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import zone.msf.entity.TopicDto;
 import zone.msf.entity.TopicImgDto;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @Mapper
 public interface TopicMapper {
 
-     @Select("select id,title,createdOn from topic where id=#{topic_id}")
+     @Select("select id,title,createdOn from topic where id=#{topic_id} and is_del=0")
      TopicDto getObjById(@Param("topic_id")int topic_id);
 
      @Select("select id,title,createdOn from topic")
@@ -32,4 +33,7 @@ public interface TopicMapper {
 
      @Select("select id,topic_id,url,memo1,view_count,createdOn from topic_img where topic_id=#{topic_id}")
      List<TopicImgDto> GetImgsByTopicId(@Param("topic_id")int topic_id);
+
+     @Update("update topic set view_count=view_count+1 where id=#{topic_id}")
+     void AddViewCount(@Param("topic_id")int topic_id);
 }

@@ -32,6 +32,7 @@ public class TopicService implements ITopicService {
 
     @Override
     public TopicDto getObjById(int topicId) {
+        topicMapper.AddViewCount(topicId);
         return topicMapper.getObjById(topicId);
     }
 
@@ -61,14 +62,14 @@ public class TopicService implements ITopicService {
         List<TopicImgDto> lst = topicMapper.GetImgsByTopicId(topicId);
         for (TopicImgDto dto
                 : lst) {
-            dto.setUrl(prefixImg + dto.getUrl());
+            dto.setUrl(prefixImg + dto.getUrl().replace(".jpg","_m.jpg"));
         }
         return lst;
     }
 
     private int ensureCategoryId(int categoryId) {
         int[] arrCategoryId = {0, 1, 2, 3, 4, 5, 6, 7, 8};
-        if (Arrays.binarySearch(arrCategoryId,categoryId)>0) {
+        if (Arrays.binarySearch(arrCategoryId, categoryId) > 0) {
             return categoryId;
         }
         return 0;
@@ -79,7 +80,7 @@ public class TopicService implements ITopicService {
                 lst) {
             List<TopicImgDto> lstImg = topicMapper.GetImgsByTopicId(dto.getId());
             if (lstImg.size() > 0) {
-                dto.setCoverImgUrl(prefixImg + lstImg.get(0).getUrl());
+                dto.setCoverImgUrl(prefixImg + lstImg.get(0).getUrl().replace(".jpg","_m.jpg"));
             }
         }
         return lst;

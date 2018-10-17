@@ -3,8 +3,8 @@ spring:
     name: msf-web
   profiles:
       active: online
-      js-version: 20181014
-      css-version: 20181014
+      js-version: 2018101402
+      css-version: 2018101402
   #模板引擎
   freemarker:
     template-loader-path: classpath:/templates/
