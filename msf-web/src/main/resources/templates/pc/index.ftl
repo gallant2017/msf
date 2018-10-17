@@ -3,30 +3,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href=".">
-    <title>大轮毂汽车视频</title>
-    <link rel="shortcut icon" href="http://www.dalungu.com/imgs/ico.ico">
+    <title>美少妇 - 海量图片任你看</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/category.css">
-    <script src="./dalungu_files/hm.js"></script>
 </head>
 
 <body>
 <header class="header">
     <div class="header_left">
-        xxx
+        美少妇-海量好图任你看 www.msf.zone
     </div>
 </header>
 <div class="body">
     <nav class="nav">
-        <a class="logo-link" href="http://www.dalungu.com/">
-            <#--<img class="logo" src="/images/logo.png" width="150">-->
+        <a class="logo-link" href="http://www.msf.zone/">
+            <img class="logo" src="/images/logo.png" width="150">
         </a>
         <ul class="navList">
             <li><a class="nav-active">首页</a></li>
 
-            <li><a href="/news/">今日更新</a></li>
+            <li><a href="/">今日更新</a></li>
 
-            <li><a href="/tuijian/">推荐</a></li>
+            <li><a href="/">推荐</a></li>
 
         </ul>
     </nav>
@@ -36,7 +35,7 @@
                 <div class="authorlist mt12">
                     <#list mainLst as item>
                         <dl>
-                            <a href="/thread?sid=${item.id}" style="display: block;" target="_blank">
+                            <a href="/thread?_sid=${item.id?c}" style="display: block;" target="_blank">
                                 <dt>
                                 <img src="${item.coverImgUrl}" alt="" >
                                 <p style="overflow-wrap: break-word;">${item.title}</p>
@@ -60,9 +59,9 @@
                 <ul class="hot-video">
                     <#list hotLst as item>
                         <li>
-                            <a href="http://www.dalungu.com/page/SsdQamFw" target="_blank">
+                            <a href="/thread?_sid=${item.id?c}"  target="_blank">
                                 <div class="hot-video-img">
-                                    <img src="${item.coverImgUrl}" alt="" width="100%" height="100%">
+                                    <img src="${item.coverImgUrl}" alt="">
                                 </div>
                                 <div class="hot-video-title">
                                     <h4>${item.title}</h4>

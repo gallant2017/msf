@@ -62,14 +62,16 @@ public class TopicService implements ITopicService {
         List<TopicImgDto> lst = topicMapper.GetImgsByTopicId(topicId);
         for (TopicImgDto dto
                 : lst) {
-            dto.setUrl(prefixImg + dto.getUrl().replace(".jpg","_m.jpg"));
+            //dto.setUrl(prefixImg + dto.getUrl().replace(".jpg","_m.jpg"));
+            dto.setUrl(prefixImg + dto.getUrl());
         }
         return lst;
     }
 
     @Override
     public List<TopicDto> getHotList() {
-        return topicMapper.GetHotList();
+        List<TopicDto> lst = topicMapper.GetHotList();
+        return fixList(lst);
     }
 
     private int ensureCategoryId(int categoryId) {

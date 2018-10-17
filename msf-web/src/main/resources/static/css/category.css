@@ -187,43 +187,22 @@
     float: left;
     width: 220px;
     height: 280px;
-    border: solid 1px #eee;
     background-color: #fff;
     margin-right: 10px;
     margin-bottom: 20px
 }
 
-.authorlist dl dt {
-    text-align: center;
-    font-size: 0;
-    height: 221px
-}
-
 .authorlist dl img {
-    width: 190px;
-    height: 180px;
-    padding: 13px 12px 0;
-    border-radius: 5%
+    width: 180px;
+    height: 240px;
+    border-radius: 2%
 }
 
 .authorlist dl p {
-    overflow: hidden;
-    height: 100px;
     font-size: 14px;
     line-height: 24px;
-    text-align: left;
-    padding: 13px 12px 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical
 }
 
-.authorlist dl dd {
-    border-bottom: 15px;
-    border-top: solid 1px #eee;
-    height: 40px;
-    border-top: solid 1px #eee
-}
 
 .authorlist dl span {
     line-height: 40px;

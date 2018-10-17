@@ -34,7 +34,7 @@ public class HomeController extends BaseController {
     public ModelAndView index(HttpServletRequest request, Model model) {
 
         if (super.IsPc(request)) {
-            List<TopicDto> mainLst = topicService.getPageList(1, 9);
+            List<TopicDto> mainLst = topicService.getPageList(1, 15);
             List<TopicDto> hotLst = topicService.getHotList();
             model.addAttribute("mainLst", mainLst);
             model.addAttribute("hotLst", hotLst);
@@ -110,7 +110,13 @@ public class HomeController extends BaseController {
             List<TopicImgDto> lstImg = topicService.getImgsByTopicId(_sid);
             model.addAttribute("objTopic", objTopic);
             model.addAttribute("lstImg", lstImg);
-            return new ModelAndView("m/detail");
+            if (super.IsPc(request)) {
+                List<TopicDto> hotLst = topicService.getHotList();
+                model.addAttribute("hotLst", hotLst);
+                return new ModelAndView("pc/detail");
+            } else {
+                return new ModelAndView("m/detail");
+            }
         }
         return new ModelAndView("error");
     }
