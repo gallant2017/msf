@@ -115,7 +115,7 @@ public class HomeController extends BaseController {
                                @PathParam("_sid") int _sid) {
         TopicDto objTopic = topicService.getObjById(_sid);
         if (objTopic != null) {
-            List<TopicImgDto> lstImg = topicService.getImgsByTopicId(_sid);
+            List<TopicImgDto> lstImg = topicService.getImgsByTopicId(_sid,super.IsPc(request));
             model.addAttribute("objTopic", objTopic);
             model.addAttribute("lstImg", lstImg);
             if (super.IsPc(request)) {

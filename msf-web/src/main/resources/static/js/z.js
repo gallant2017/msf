@@ -55,6 +55,6 @@ $(document).ready(function(){
     Lazyload.init({
         container:document,
         attr:'lazysrc',
-        timeout:200
+        timeout:600
     });
 });

@@ -12,13 +12,30 @@
 <body>
 <header class="header">
     <div class="header_left">
-        <#--美少妇-海量好图任你看 www.msf.zone-->
+        美少妇-海量好图任你看 www.msf.zone
     </div>
+    <script>
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if (!IsPC()) {
+            window.location.href = 'http://m.msf.zone';
+        }
+    </script>
 </header>
 <div class="body">
     <nav class="nav">
         <a class="logo-link" href="http://www.msf.zone/">
-            <#--<img class="logo" src="/images/logo.png" width="150">-->
+            <img class="logo" src="/images/logo.png" width="150">
         </a>
         <ul class="navList">
             <li><a href="/">首页</a></li>

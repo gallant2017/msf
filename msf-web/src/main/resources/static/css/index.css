@@ -348,21 +348,16 @@ a {
 }
 
 .hot-video-img {
-    width: 60px;
-    margin-right: 5%;
-    height: 80px;
-    border-radius:2%;
+    width: 90px;
+    height: 120px;
     float: left;
-    overflow: hidden;
 }
 
 .hot-video-img img {
-    -webkit-transition: all 1s;
+    width: 90px;
+    height: 120px;
 }
 
-.hot-video-img img:hover {
-    -webkit-transform: scale(1.1);
-}
 
 .hot-video-title {
     width: 50%;

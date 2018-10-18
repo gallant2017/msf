@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href=".">
     <title>美少妇 - 海量图片任你看</title>
+    <meta name="keywords" content="美少妇,图片写真,美少妇,msf.zone,好图尽在美少妇,少妇,${categoryName!}">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/category.css">
@@ -11,13 +12,30 @@
 <body>
 <header class="header">
     <div class="header_left">
-        <#--美少妇-海量好图任你看 www.msf.zone-->
+        美少妇-海量好图任你看 www.msf.zone
     </div>
+    <script>
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if (!IsPC()) {
+            window.location.href = 'http://m.msf.zone';
+        }
+    </script>
 </header>
 <div class="body">
     <nav class="nav">
         <a class="logo-link" href="http://www.msf.zone/">
-            <#--<img class="logo" src="/images/logo.png" width="150">-->
+            <img class="logo" src="/images/logo.png" width="150">
         </a>
         <ul class="navList">
             <li><a href="/" <#if categoryId==0>class="nav-active"</#if>>首页</a></li>

@@ -36,12 +36,6 @@ public class TopicService implements ITopicService {
         return topicMapper.getObjById(topicId);
     }
 
-//    @Override
-//    public List<TopicDto> getList() {
-//        List<TopicDto> lst = topicMapper.getList();
-//        return fixList(lst);
-//    }
-
     @Override
     public List<TopicDto> getPageListByCategoryId(int pageIndex, int pageSize, int categoryId, boolean isPc) {
 
@@ -49,7 +43,6 @@ public class TopicService implements ITopicService {
         if (pageSize > 20) {
             pageSize = 10;
         }
-
         int offset = (pageIndex - 1) * pageSize;
         categoryId = ensureCategoryId(categoryId);
         List<TopicDto> lst;
@@ -65,18 +58,19 @@ public class TopicService implements ITopicService {
         } else {
             lst = topicMapper.getPageListByCategoryId(offset, pageSize, categoryId);
         }
-        return fixList(lst, isPc);
+        return fixList(lst);
     }
 
     @Override
-    public List<TopicImgDto> getImgsByTopicId(int topicId) {
+    public List<TopicImgDto> getImgsByTopicId(int topicId,boolean isPc) {
         List<TopicImgDto> lst = topicMapper.GetImgsByTopicId(topicId);
         for (TopicImgDto dto
                 : lst) {
-            dto.setUrl(prefixImg + dto.getUrl().replace(".jpg","_m.jpg"));
-            //dto.setUrl(prefixImg + dto.getUrl());
-            dto.setUrl(prefixImg + "1.jpg");
-
+            if (isPc) {
+                dto.setUrl(prefixImg + dto.getUrl().replace(".jpg", "_c.jpg"));
+            } else {
+                dto.setUrl(prefixImg + dto.getUrl().replace(".jpg", "_m.jpg"));
+            }
         }
         return lst;
     }
@@ -84,7 +78,7 @@ public class TopicService implements ITopicService {
     @Override
     public List<TopicDto> getHotList() {
         List<TopicDto> lst = topicMapper.GetHotList();
-        return fixList(lst,false);
+        return fixList(lst);
     }
 
     private int ensureCategoryId(int categoryId) {
@@ -95,17 +89,12 @@ public class TopicService implements ITopicService {
         return 0;
     }
 
-    private List<TopicDto> fixList(List<TopicDto> lst,boolean isPc) {
+    private List<TopicDto> fixList(List<TopicDto> lst) {
         for (TopicDto dto :
                 lst) {
-            List<TopicImgDto> lstImg = topicMapper.GetImgsByTopicId(dto.getId());
-            if (lstImg.size() > 0) {
-                if (isPc) {
-                    dto.setCoverImgUrl(prefixImg + lstImg.get(0).getUrl().replace(".jpg","_c.jpg"));
-                } else {
-                    dto.setCoverImgUrl(prefixImg + lstImg.get(0).getUrl().replace(".jpg","_m.jpg"));
-                }
-                //dto.setCoverImgUrl(prefixImg + "1.jpg");
+            TopicImgDto imgObj = topicMapper.GetCoverImgByTopicId(dto.getId());
+            if (imgObj != null) {
+                dto.setCoverImgUrl(prefixImg + imgObj.getUrl().replace(".jpg", "_m.jpg"));
             }
         }
         return lst;

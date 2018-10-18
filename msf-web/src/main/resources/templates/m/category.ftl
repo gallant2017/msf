@@ -51,28 +51,28 @@
             <div class="content"><p class="title">美腿</p></div>
         </div>
     </a>
-    <a href="/qingchun/">
+    <a href="/news/">
         <div class="item">
             <div class="imgBox">
                 <img class="img" src="/images/qingchun.jpg">
             </div>
-            <div class="content"><p class="title">清纯</p></div>
+            <div class="content"><p class="title">最新</p></div>
         </div>
     </a>
-    <a href="/duanfa/">
+    <a href="/tuijian/">
         <div class="item">
             <div class="imgBox">
                 <img class="img" src="/images/duanfa.jpg">
             </div>
-            <div class="content"><p class="title">短发</p></div>
+            <div class="content"><p class="title">推荐</p></div>
         </div>
     </a>
-    <a href="/yushi/">
+    <a href="/wangqi/">
         <div class="item">
             <div class="imgBox">
                 <img class="img" src="/images/yushi.jpg">
             </div>
-            <div class="content"><p class="title">浴室</p></div>
+            <div class="content"><p class="title">往期</p></div>
         </div>
     </a>
 </div>

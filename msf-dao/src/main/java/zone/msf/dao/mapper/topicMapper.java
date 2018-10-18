@@ -25,6 +25,9 @@ public interface TopicMapper {
      @Select("select id,topic_id,url,memo1,view_count,createdOn from topic_img where topic_id=#{topic_id}")
      List<TopicImgDto> GetImgsByTopicId(@Param("topic_id")int topic_id);
 
+    @Select("select id,topic_id,url from topic_img where topic_id=#{topic_id} order by rand() limit 1")
+    TopicImgDto GetCoverImgByTopicId(@Param("topic_id")int topic_id);
+
      @Update("update topic set view_count=view_count+1 where id=#{topic_id}")
      void AddViewCount(@Param("topic_id")int topic_id);
 

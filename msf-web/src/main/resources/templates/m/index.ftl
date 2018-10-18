@@ -27,11 +27,9 @@
             }
             return flag;
         }
-        ;
         if (IsPC()) {
-            //window.location.href = 'http://www.msf.zone';
+            window.location.href = 'http://www.msf.zone';
         }
-
     </script>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
     <link href="/css/m_reset.css" rel="stylesheet" type="text/css"/>

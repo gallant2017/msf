@@ -24,12 +24,6 @@ public class ApiController extends BaseController{
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public BaseApiResponse<List<TopicDto>> listTopic(HttpServletRequest request,int p, int s, int c) {
-
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         List<TopicDto> lst=topicService.getPageListByCategoryId(p, s, c,super.IsPc(request));
         return new BaseApiResponse<List<TopicDto>>(0, "", lst);
     }

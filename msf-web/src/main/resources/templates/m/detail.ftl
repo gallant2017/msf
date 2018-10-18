@@ -13,7 +13,6 @@
     <meta name="keywords" content="美少妇，msf，msf.zone,少妇">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <script>
-        //是否为pc
         function IsPC() {
             var userAgentInfo = navigator.userAgent;
             var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
@@ -26,11 +25,9 @@
             }
             return flag;
         }
-        ;
         if (IsPC()) {
-            //window.location.href = 'http://www.msf.zone';
+            window.location.href = 'http://www.msf.zone';
         }
-
     </script>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
     <link href="/css/m_reset.css" rel="stylesheet" type="text/css"/>

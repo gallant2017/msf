@@ -22,7 +22,7 @@ public interface ITopicService {
 
     List<TopicDto> getPageListByCategoryId(int pageIndex, int pageSize, int categoryId, boolean isPc);
 
-    List<TopicImgDto> getImgsByTopicId(int topicId);
+    List<TopicImgDto> getImgsByTopicId(int topicId,boolean isPc);
 
     List<TopicDto> getHotList();
 }
