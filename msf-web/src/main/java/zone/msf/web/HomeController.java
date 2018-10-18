@@ -32,17 +32,9 @@ public class HomeController extends BaseController {
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, Model model) {
-
-        if (super.IsPc(request)) {
-            List<TopicDto> mainLst = topicService.getPageList(1, 15);
-            List<TopicDto> hotLst = topicService.getHotList();
-            model.addAttribute("mainLst", mainLst);
-            model.addAttribute("hotLst", hotLst);
-            return new ModelAndView("pc/index");
-        } else {
-            model.addAttribute("categoryId", 0);
-            return new ModelAndView("m/index");
-        }
+        model.addAttribute("categoryId", 0);
+        model.addAttribute("categoryName","首页");
+        return _commonIndex(request,model);
     }
 
     @RequestMapping(value = "/{category}/", method = RequestMethod.GET)
@@ -50,7 +42,17 @@ public class HomeController extends BaseController {
                                         Model model) {
         model.addAttribute("categoryId", getCategoryId(category));
         model.addAttribute("categoryName",getCategoryName(category));
-        return new ModelAndView("m/index");
+        return _commonIndex(request,model);
+    }
+
+    private ModelAndView _commonIndex(HttpServletRequest request,Model model) {
+        if (super.IsPc(request)) {
+            List<TopicDto> hotLst = topicService.getHotList();
+            model.addAttribute("hotLst", hotLst);
+            return new ModelAndView("pc/index");
+        } else {
+            return new ModelAndView("m/index");
+        }
     }
 
     private int getCategoryId(String category) {
@@ -69,8 +71,14 @@ public class HomeController extends BaseController {
             return 7;
         } else if ("yushi".equals(categoryStr)) {
             return 8;
+        } else if ("news".equals(categoryStr)) {
+            return 9;
+        } else if("tuijian".equals(categoryStr)) {
+            return 10;
+        } else if ("wangqi".equals(categoryStr)) {
+            return 11;
         } else {
-            return 0;
+           return 0;
         }
     }
 

@@ -8,6 +8,7 @@ import zone.msf.entity.BaseApiResponse;
 import zone.msf.entity.TopicDto;
 import zone.msf.services.ITopicService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,20 +17,20 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/api/feed")
-public class ApiController {
+public class ApiController extends BaseController{
 
     @Autowired
     ITopicService topicService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public BaseApiResponse<List<TopicDto>> listTopic(int p, int s, int c) {
+    public BaseApiResponse<List<TopicDto>> listTopic(HttpServletRequest request,int p, int s, int c) {
 
-        List<TopicDto> lst;
-        if (c == 0) {
-            lst = topicService.getPageList(p, s);
-        } else {
-            lst = topicService.getPageListByCategoryId(p, s, c);
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        List<TopicDto> lst=topicService.getPageListByCategoryId(p, s, c,super.IsPc(request));
         return new BaseApiResponse<List<TopicDto>>(0, "", lst);
     }
 }

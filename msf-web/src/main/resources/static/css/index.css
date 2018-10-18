@@ -97,7 +97,7 @@ a {
 }
 
 .navList li a:hover {
-    background-color: rgba(26, 132, 116, .6);
+    background-color: lightpink;
     color: #fff;
 }
 
@@ -143,85 +143,6 @@ a {
     border-bottom: 1px solid #e8e8e8;
 }
 
-/*列表视频*/
-.content-list li .li-video {
-    width: 30%;
-    height: 120px;
-    overflow: hidden;
-    float: left;
-    position: relative;
-}
-
-.content-list li .li-video img {
-    -webkit-transition: all 1s;
-}
-
-.content-list li .li-video img:hover {
-    -webkit-transform: scale(1.1);
-}
-
-.content-list li .li-title {
-    width: 66%;
-    height: 100px;
-    float: left;
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-.content-list li:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.content-list li .li-title h3 {
-    height: 75px;
-    line-height: 25px;
-    margin-bottom: 10px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-}
-
-.content-list li .li-title h3 a:hover {
-    color: #F26641;
-    text-decoration: underline;
-}
-
-.content-list li .li-title span {
-    padding: 2px 8px;
-    border: 1px solid #2d90bc;
-    font-size: 12px;
-    float: left;
-}
-
-.content-list li .li-title span a {
-    color: #2d90bc;
-}
-
-.content-list li .li-title p {
-    color: #777;
-}
-
-.content-list li .li-title p a {
-    color: #777;
-    padding: 0 3px;
-}
-
-.content-list li .li-title p a:hover {
-    color: #f37352;
-}
-
-.content-list li .li-title .li-head-img {
-    width: 20px;
-    height: 20px;
-    margin: 0 8px;
-    background-color: #fff;
-    overflow: hidden;
-    border-radius: 100%;
-    float: left;
-}
 
 /*列表图片*/
 .li-img {
@@ -543,73 +464,6 @@ a {
     cursor: pointer;
 }
 
-/* 加载组件 */
-.loading {
-    text-align: center;
-}
-
-.loading span {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    margin: 5px;
-}
-
-.loading span:nth-child(1) {
-    background-color: red;
-    -webkit-animation: loading linear 1.2s 0.4s infinite;
-    -moz-animation: loading linear 1.2s 0.4s infinite;
-}
-
-.loading span:nth-child(2) {
-    background-color: yellow;
-    -webkit-animation: loading linear 1.2s 0.8s infinite;
-    -moz-animation: loading linear 1.2s 0.8s infinite;
-}
-
-.loading span:nth-child(3) {
-    background-color: green;
-    -webkit-animation: loading linear 1.2s 1.2s infinite;
-    -moz-animation: loading linear 1.2s 1.2s infinite;
-}
-
-@-webkit-keyframes loading {
-    0% {
-        -webkit-transform: scale(0.5);
-    }
-    25% {
-        -webkit-transform: scale(0.8);
-    }
-    50% {
-        -webkit-transform: scale(1.2);
-    }
-    75% {
-        -webkit-transform: scale(0.9);
-    }
-    100% {
-        -webkit-transform: scale(0.6);
-    }
-}
-
-@-moz-keyframes loading {
-    0% {
-        -moz-transform: scale(0.5);
-    }
-    25% {
-        -moz-transform: scale(0.8);
-    }
-    50% {
-        -moz-transform: scale(1.2);
-    }
-    75% {
-        -moz-transform: scale(0.9);
-    }
-    100% {
-        -moz-transform: scale(0.6);
-    }
-}
-
 /* 滚动条宽度 */
 /*::-webkit-scrollbar{
 	width: 8px;
@@ -776,4 +630,26 @@ address, cite, dfn, em, i {
     width: 58px;
     height: 58px;
     margin: 18px 46px 0
+}
+.content .date{
+    font-size:0.6em;
+    float: left;
+    color: #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.imgBox img{
+    width:700px;
+}
+.loading{
+    width: 700px;
+    text-align: center;
+}
+.loading img{
+    width: 40px;
+    height: 30px;
+}
+.loading div{
+    color: #ccc;
+    font-size: 13px;
 }

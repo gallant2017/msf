@@ -18,11 +18,9 @@ public interface ITopicService {
 
     TopicDto getObjById(int topicId);
 
-    List<TopicDto> getList();
+//    List<TopicDto> getList();
 
-    List<TopicDto> getPageList(int pageIndex,int pageSize);
-
-    List<TopicDto> getPageListByCategoryId(int pageIndex,int pageSize,int categoryId);
+    List<TopicDto> getPageListByCategoryId(int pageIndex, int pageSize, int categoryId, boolean isPc);
 
     List<TopicImgDto> getImgsByTopicId(int topicId);
 

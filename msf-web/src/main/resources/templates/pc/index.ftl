@@ -8,43 +8,44 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/category.css">
 </head>
-
 <body>
 <header class="header">
     <div class="header_left">
-        美少妇-海量好图任你看 www.msf.zone
+        <#--美少妇-海量好图任你看 www.msf.zone-->
     </div>
 </header>
 <div class="body">
     <nav class="nav">
         <a class="logo-link" href="http://www.msf.zone/">
-            <img class="logo" src="/images/logo.png" width="150">
+            <#--<img class="logo" src="/images/logo.png" width="150">-->
         </a>
         <ul class="navList">
-            <li><a class="nav-active">首页</a></li>
-
-            <li><a href="/">今日更新</a></li>
-
-            <li><a href="/">推荐</a></li>
-
+            <li><a href="/" <#if categoryId==0>class="nav-active"</#if>>首页</a></li>
+            <li><a href="/news/" <#if categoryId==9>class="nav-active"</#if>>今日更新</a></li>
+            <li><a href="/tuijian/" <#if categoryId==10>class="nav-active"</#if>>推荐</a></li>
+            <li><a href="/wangqi/" <#if categoryId==11>class="nav-active"</#if>>往期</a></li>
         </ul>
     </nav>
     <div class="content">
-        <div class="content-left" style="height: 1814px;">
+        <div class="content-left">
             <ul class="content-list">
                 <div class="authorlist mt12">
-                    <#list mainLst as item>
-                        <dl>
-                            <a href="/thread?_sid=${item.id?c}" style="display: block;" target="_blank">
-                                <dt>
-                                <img src="${item.coverImgUrl}" alt="" >
-                                <p style="overflow-wrap: break-word;">${item.title}</p>
-                                </dt>
-                            </a>
-                        </dl>
-                    </#list>
+                    <#--<#list mainLst as item>-->
+                        <#--<dl>-->
+                            <#--<a href="/thread?_sid=${item.id?c}" style="display: block;" target="_blank">-->
+                                <#--<dt>-->
+                                <#--<img src="${item.coverImgUrl}" alt="" >-->
+                                <#--<p style="overflow-wrap: break-word;">${item.title}</p>-->
+                                <#--</dt>-->
+                            <#--</a>-->
+                        <#--</dl>-->
+                    <#--</#list>-->
                 </div>
             </ul>
+            <div class="loading">
+                <img src="/images/loading.gif">
+                <div>加载中...</div>
+            </div>
         </div>
         <div class="content-right">
             <#--<div class="searchBox">-->
@@ -98,5 +99,10 @@
         </div>
     </div>
 </div>
+<script>
+    var categoryId =${categoryId};
+</script>
+<script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+<script src="${staticUrl}js/index.js?v=${jsVersion}"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
     init: function () {
         var me = this;
         me.p = 1;
-        me.s = 5;
+        me.s = 9;
         me.isLoading = false;
         me.hasMore = true;
         me.event();
@@ -14,6 +14,7 @@
             var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
             if (($(document).height() - 30) <= totalheight) {
                 if (me.hasMore && !me.isLoading) {
+                    window.console.log("ajax..");
                     me.getList();
                 }
             }
@@ -21,7 +22,6 @@
     },
     getList: function () { 
         var me = this;
-
         $.ajax({
             type: "get",
             url: "/api/feed/list",
@@ -53,37 +53,21 @@
         if (lst.length>0) {
             var lsthtml="";
             $.each(lst, function (i, item) {
-                lsthtml += "<a href=\"/thread?_sid=" + item.id + "\">";
-                lsthtml += "<div class=\"item\">";
-
-                lsthtml += "<div class=\"imgBox\">";
-                lsthtml += "<img class=\"img lazy\" src=\"" + item.coverImgUrl + "\" alt=\"" + item.title + "\">";
-                lsthtml += "</div>";
-
-                lsthtml += "<div class=\"content\">";
-                lsthtml += "<p class=\"title\">" + item.title + "</p>";
-                lsthtml += "<div class=\"pub\"><span>" + item.createdOn + "</span></div>"
-                lsthtml += "</div>";
-
-                lsthtml += "</div>";
-                lsthtml += "</a>"
+                lsthtml += "<dl>";
+                lsthtml += "<a href=\"/thread?_sid=" + item.id + "\" style=\"display: block;\" target=\"_blank\">";
+                lsthtml += "<dt>";
+                lsthtml += "<img src=\"" + item.coverImgUrl + "\">";
+                lsthtml += "<p style=\"overflow-wrap: break-word;\">" + item.title + "</p>";
+                lsthtml += "</dt>"
+                lsthtml += "</a>";
+                lsthtml += "</dl>"
             });
-            $(".feed").append(lsthtml);
+            $(".mt12").append(lsthtml);
             $(".loading").hide();
         }
         if (lst.length < me.s) {
             me.hasMore = false;
         }
-        // if (me.p == 1) {
-        //     $(window).scroll(function () {
-        //         var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
-        //         if (($(document).height() - 30) <= totalheight) {
-        //             if (me.hasMore && !me.isLoading) {
-        //                 me.getList();
-        //             }
-        //         }
-        //     });
-        // }
         $(".loading").hide();
         me.p++;
     }

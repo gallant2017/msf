@@ -12,29 +12,30 @@
 <body>
 <header class="header">
     <div class="header_left">
-        美少妇-海量好图任你看 www.msf.zone
+        <#--美少妇-海量好图任你看 www.msf.zone-->
     </div>
 </header>
 <div class="body">
     <nav class="nav">
         <a class="logo-link" href="http://www.msf.zone/">
-            <img class="logo" src="/images/logo.png" width="150">
+            <#--<img class="logo" src="/images/logo.png" width="150">-->
         </a>
         <ul class="navList">
-            <li><a class="nav-active">首页</a></li>
+            <li><a href="/">首页</a></li>
 
-            <li><a href="/">今日更新</a></li>
+            <li><a href="/news/">今日更新</a></li>
 
-            <li><a href="/">推荐</a></li>
+            <li><a href="/tuijian/">推荐</a></li>
 
+            <li><a href="/wangqi/">往期</a></li>
         </ul>
     </nav>
     <div class="content">
         <div class="content-left" style="height: 1814px;">
             <p class="title">${objTopic.title}<p>
-            <div style="font-size:0.6em;float: left;color: #ccc;margin-top: 1em;">${objTopic.createdOn?datetime('yyyy-MM-dd HH:mm')}</div>
+            <div class="date">${objTopic.createdOn?datetime('yyyy-MM-dd HH:mm')}</div>
         <#list lstImg as item>
-            <div class="imgBox" style="margin-top: 60px;">
+            <div class="imgBox">
                 <img class="img lazy" lazysrc="${item.url}"
                      src="/images/x.png"
                      alt="${item.memo1}"></div>
@@ -46,9 +47,9 @@
                 <ul class="hot-video">
                 <#list hotLst as item>
                     <li>
-                        <a href="/" target="_blank">
+                        <a href="/thread?_sid=${item.id?c}"  target="_blank">
                             <div class="hot-video-img">
-                                <img src="${item.coverImgUrl}" alt="" width="100%" height="100%">
+                                <img src="${item.coverImgUrl}" alt="">
                             </div>
                             <div class="hot-video-title">
                                 <h4>${item.title}</h4>
