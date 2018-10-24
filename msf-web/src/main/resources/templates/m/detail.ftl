@@ -30,8 +30,8 @@
         }
     </script>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
-    <link href="/css/m_reset.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/m_index.css" rel="stylesheet" type="text/css"/>
+    <link href="${staticUrl}css/m_reset.css?v=${cssVersion}" rel="stylesheet" type="text/css"/>
+    <link href="${staticUrl}css/m_index.css?v=${cssVersion}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <#include "common/header.ftl">

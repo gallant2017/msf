@@ -11,6 +11,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta name="baidu-site-verification" content="UWl4tVX0j0" />
     <meta name="keywords" content="美少妇，msf，msf.zone,少妇">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <script>
@@ -32,8 +33,8 @@
         }
     </script>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
-    <link href="/css/m_reset.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/m_index.css" rel="stylesheet" type="text/css"/>
+    <link href="${staticUrl}/css/m_reset.css?v=${cssVersion}" rel="stylesheet" type="text/css"/>
+    <link href="${staticUrl}/css/m_index.css?v=${cssVersion}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <#include "common/header.ftl">

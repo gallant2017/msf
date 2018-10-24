@@ -348,14 +348,13 @@ a {
 }
 
 .hot-video-img {
-    width: 90px;
-    height: 120px;
     float: left;
+    margin-right: 5%;
 }
 
 .hot-video-img img {
-    width: 90px;
-    height: 120px;
+    height: 80px;
+    width: 70px;
 }
 
 

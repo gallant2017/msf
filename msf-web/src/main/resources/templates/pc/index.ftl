@@ -4,10 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href=".">
     <title>美少妇 - 海量图片任你看</title>
+    <meta name="baidu-site-verification" content="UWl4tVX0j0" />
     <meta name="keywords" content="美少妇,图片写真,美少妇,msf.zone,好图尽在美少妇,少妇,${categoryName!}">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/category.css">
+    <link rel="stylesheet" href="${staticUrl}css/index.css?v=${cssVersion}">
+    <link rel="stylesheet" href="${staticUrl}css/category.css?v=${cssVersion}">
 </head>
 <body>
 <header class="header">

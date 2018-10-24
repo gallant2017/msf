@@ -5,7 +5,7 @@
     <base href=".">
     <title>${objTopic.title} - 美少妇</title>
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="${staticUrl}css/index.css?v=${cssVersion}">
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
 </head>
 

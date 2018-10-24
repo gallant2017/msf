@@ -13,8 +13,8 @@
     <meta name="keywords" content="美少妇，msf，msf.zone,少妇">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
-    <link href="css/m_reset.css" rel="stylesheet" type="text/css"/>
-    <link href="css/m_index.css" rel="stylesheet" type="text/css"/>
+    <link href="${staticUrl}css/m_reset.css?v=${cssVersion}" rel="stylesheet" type="text/css"/>
+    <link href="${staticUrl}css/m_index.css?v=${cssVersion}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <#include "common/header.ftl">
@@ -88,6 +88,6 @@
             <p class="active">品味</p></div>
     </a>
 </div>
-<script src="/js/common.js"></script>
+<script src="${staticUrl}js/common.js?v=${jsVersion}"></script>
 </body>
 </html>
