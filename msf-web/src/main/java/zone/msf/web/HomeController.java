@@ -47,7 +47,9 @@ public class HomeController extends BaseController {
 
     private ModelAndView _commonIndex(HttpServletRequest request,Model model) {
         if (super.IsPc(request)) {
+            List<TopicDto> mainLst = topicService.getPageListByCategoryId(1, 18, 0);
             List<TopicDto> hotLst = topicService.getHotList();
+            model.addAttribute("mainLst", mainLst);
             model.addAttribute("hotLst", hotLst);
             return new ModelAndView("pc/index");
         } else {

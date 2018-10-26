@@ -37,7 +37,7 @@ public class TopicService implements ITopicService {
     }
 
     @Override
-    public List<TopicDto> getPageListByCategoryId(int pageIndex, int pageSize, int categoryId, boolean isPc) {
+    public List<TopicDto> getPageListByCategoryId(int pageIndex, int pageSize, int categoryId) {
 
         //pageSize最大设置为20
         if (pageSize > 20) {

@@ -20,7 +20,7 @@ public interface ITopicService {
 
 //    List<TopicDto> getList();
 
-    List<TopicDto> getPageListByCategoryId(int pageIndex, int pageSize, int categoryId, boolean isPc);
+    List<TopicDto> getPageListByCategoryId(int pageIndex, int pageSize, int categoryId);
 
     List<TopicImgDto> getImgsByTopicId(int topicId,boolean isPc);
 

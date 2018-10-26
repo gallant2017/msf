@@ -49,16 +49,16 @@
         <div class="content-left">
             <ul class="content-list">
                 <div class="authorlist mt12">
-                    <#--<#list mainLst as item>-->
-                        <#--<dl>-->
-                            <#--<a href="/thread?_sid=${item.id?c}" style="display: block;" target="_blank">-->
-                                <#--<dt>-->
-                                <#--<img src="${item.coverImgUrl}" alt="" >-->
-                                <#--<p style="overflow-wrap: break-word;">${item.title}</p>-->
-                                <#--</dt>-->
-                            <#--</a>-->
-                        <#--</dl>-->
-                    <#--</#list>-->
+                    <#list mainLst as item>
+                        <dl>
+                            <a href="/thread?_sid=${item.id?c}" style="display: block;" target="_blank">
+                                <dt>
+                                <img src="${item.coverImgUrl}" alt="" >
+                                <p style="overflow-wrap: break-word;">${item.title}</p>
+                                </dt>
+                            </a>
+                        </dl>
+                    </#list>
                 </div>
             </ul>
             <div class="loading">
@@ -111,7 +111,7 @@
             <#--</div>-->
             <div class="copyright">
                 <ul>
-                    <li>© 2018 MSF www.msf.zone</li>
+                    <li>© 2018 MSF 美少妇 www.msf.zone</li>
                     <li>部分图片来自网络，如有侵权，联系我们删除！</li>
                 </ul>
             </div>

@@ -1,7 +1,7 @@
 ({
     init: function () {
         var me = this;
-        me.p = 1;
+        me.p = 2;
         me.s = 9;
         me.isLoading = false;
         me.hasMore = true;
@@ -9,12 +9,11 @@
     },
     event: function () {
         var me = this;
-        me.getList();
+        //me.getList();
         $(window).scroll(function () {
             var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
             if (($(document).height() - 30) <= totalheight) {
                 if (me.hasMore && !me.isLoading) {
-                    window.console.log("ajax..");
                     me.getList();
                 }
             }
