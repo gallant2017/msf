@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
-    <title>${objTopic.title}</title>
+    <title>${objTopic.title}_美少妇空间</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -10,7 +10,8 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="keywords" content="美少妇，msf，msf.zone,少妇">
+    <meta name="keywords" content="美少妇,美少妇空间,海量图片,少妇,${categoryName!}">
+    <meta name="description" content="美少妇海量图片,给你带来全新无广告的视觉盛宴."/>
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <script>
         function IsPC() {
@@ -37,7 +38,7 @@
 <#include "common/header.ftl">
 
 <div class="feed clearfix">
-    <p class="title">${objTopic.title}<p>
+    <p class="title">${objTopic.title} - 美少妇空间<p>
     <div style="font-size:0.6em;float: right;color: #ccc;margin: 1em;">${objTopic.createdOn?datetime('yyyy-MM-dd HH:mm')}</div>
 <#list lstImg as item>
     <a href="#">

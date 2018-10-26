@@ -24,7 +24,7 @@ public class ApiController extends BaseController{
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public BaseApiResponse<List<TopicDto>> listTopic(HttpServletRequest request,int p, int s, int c) {
-        List<TopicDto> lst=topicService.getPageListByCategoryId(p, s, c,super.IsPc(request));
+        List<TopicDto> lst = topicService.getPageListByCategoryId(p, s, c);
         return new BaseApiResponse<List<TopicDto>>(0, "", lst);
     }
 }

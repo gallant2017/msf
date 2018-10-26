@@ -2,7 +2,7 @@ spring:
   application:
     name: msf-web
   profiles:
-      active: online
+      active: dev
       js-version: 20181017-004
       css-version: 20181017-004
   #模板引擎

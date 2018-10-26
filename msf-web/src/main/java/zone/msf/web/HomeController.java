@@ -34,20 +34,21 @@ public class HomeController extends BaseController {
     public ModelAndView index(HttpServletRequest request, Model model) {
         model.addAttribute("categoryId", 0);
         model.addAttribute("categoryName","首页");
-        return _commonIndex(request,model);
+        return _commonIndex(request, model, 0);
     }
 
     @RequestMapping(value = "/{category}/", method = RequestMethod.GET)
     public ModelAndView indexByCategory(HttpServletRequest request, @PathVariable("category") String category,
                                         Model model) {
+        int categoryId = getCategoryId(category);
         model.addAttribute("categoryId", getCategoryId(category));
-        model.addAttribute("categoryName",getCategoryName(category));
-        return _commonIndex(request,model);
+        model.addAttribute("categoryName", getCategoryName(category));
+        return _commonIndex(request, model, categoryId);
     }
 
-    private ModelAndView _commonIndex(HttpServletRequest request,Model model) {
+    private ModelAndView _commonIndex(HttpServletRequest request,Model model,int categoryId) {
         if (super.IsPc(request)) {
-            List<TopicDto> mainLst = topicService.getPageListByCategoryId(1, 18, 0);
+            List<TopicDto> mainLst = topicService.getPageListByCategoryId(1, 18, categoryId);
             List<TopicDto> hotLst = topicService.getHotList();
             model.addAttribute("mainLst", mainLst);
             model.addAttribute("hotLst", hotLst);

@@ -3,7 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href=".">
-    <title>${objTopic.title} - 美少妇</title>
+    <title>${objTopic.title}_美少妇空间</title>
+    <meta name="keywords" content="美少妇,美少妇空间,海量图片,少妇,${categoryName!}">
+    <meta name="description" content="美少妇海量图片,给你带来全新无广告的视觉盛宴."/>
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="${staticUrl}css/index.css?v=${cssVersion}">
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>

@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>品味-美少妇, 各种图片尽在美少妇</title>
+    <title>品味 - 美少妇, 好图尽在美少妇</title>
+    <meta name="keywords" content="美少妇,美少妇空间,海量图片,少妇,${categoryName!}">
+    <meta name="description" content="美少妇海量图片,给你带来全新无广告的视觉盛宴."/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -10,7 +12,6 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="keywords" content="美少妇，msf，msf.zone,少妇">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
     <link href="${staticUrl}css/m_reset.css?v=${cssVersion}" rel="stylesheet" type="text/css"/>
