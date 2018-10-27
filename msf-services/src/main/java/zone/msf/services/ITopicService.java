@@ -25,4 +25,11 @@ public interface ITopicService {
     List<TopicImgDto> getImgsByTopicId(int topicId,boolean isPc);
 
     List<TopicDto> getHotList();
+
+    /**
+     * 添加PV记录
+     * @param ip
+     * @param position
+     */
+    void AddPV(String ip,int position);
 }

@@ -48,12 +48,14 @@ public class HomeController extends BaseController {
 
     private ModelAndView _commonIndex(HttpServletRequest request,Model model,int categoryId) {
         if (super.IsPc(request)) {
+            topicService.AddPV(super.getIpAddress(request), 1);
             List<TopicDto> mainLst = topicService.getPageListByCategoryId(1, 18, categoryId);
             List<TopicDto> hotLst = topicService.getHotList();
             model.addAttribute("mainLst", mainLst);
             model.addAttribute("hotLst", hotLst);
             return new ModelAndView("pc/index");
         } else {
+            topicService.AddPV(super.getIpAddress(request), 11);
             return new ModelAndView("m/index");
         }
     }
@@ -122,10 +124,12 @@ public class HomeController extends BaseController {
             model.addAttribute("objTopic", objTopic);
             model.addAttribute("lstImg", lstImg);
             if (super.IsPc(request)) {
+                topicService.AddPV(super.getIpAddress(request), 2);
                 List<TopicDto> hotLst = topicService.getHotList();
                 model.addAttribute("hotLst", hotLst);
                 return new ModelAndView("pc/detail");
             } else {
+                topicService.AddPV(super.getIpAddress(request), 12);
                 return new ModelAndView("m/detail");
             }
         }
@@ -137,7 +141,8 @@ public class HomeController extends BaseController {
      * @return
      */
     @RequestMapping(value = "/category", method = RequestMethod.GET)
-    public ModelAndView category() {
+    public ModelAndView category(HttpServletRequest request) {
+        topicService.AddPV(super.getIpAddress(request), 13);
         return new ModelAndView("m/category");
     }
 

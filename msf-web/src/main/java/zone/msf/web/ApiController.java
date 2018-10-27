@@ -23,7 +23,7 @@ public class ApiController extends BaseController{
     ITopicService topicService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public BaseApiResponse<List<TopicDto>> listTopic(HttpServletRequest request,int p, int s, int c) {
+    public BaseApiResponse<List<TopicDto>> listTopic(int p, int s, int c) {
         List<TopicDto> lst = topicService.getPageListByCategoryId(p, s, c);
         return new BaseApiResponse<List<TopicDto>>(0, "", lst);
     }

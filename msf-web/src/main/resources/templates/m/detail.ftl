@@ -12,7 +12,7 @@
     <meta http-equiv="Expires" content="0">
     <meta name="keywords" content="美少妇,美少妇空间,海量图片,少妇,${categoryName!}">
     <meta name="description" content="美少妇海量图片,给你带来全新无广告的视觉盛宴."/>
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
     <script>
         function IsPC() {
             var userAgentInfo = navigator.userAgent;
@@ -38,36 +38,35 @@
 <#include "common/header.ftl">
 
 <div class="feed clearfix">
-    <p class="title">${objTopic.title} - 美少妇空间<p>
+    <p class="title">${objTopic.title} - 美少妇空间
+    <p>
     <div style="font-size:0.6em;float: right;color: #ccc;margin: 1em;">${objTopic.createdOn?datetime('yyyy-MM-dd HH:mm')}</div>
 <#list lstImg as item>
-    <a href="#">
-        <div class="item">
-            <div class="imgBox">
-                <img class="img lazy" lazysrc="${item.url}"
-                     src="/images/x.png"
-                     alt="${item.memo1}"></div>
-            <#--<div class="content">-->
-                <#--&lt;#&ndash;<p class="title">${item.memo1}</p>&ndash;&gt;-->
-                <#--&lt;#&ndash;<div class="pub"><span></span> </div>&ndash;&gt;-->
-                <#--&lt;#&ndash;<div class="like"><i></i><span>100</span></div>&ndash;&gt;-->
-            <#--</div>-->
-        </div>
-    </a>
+    <div class="item">
+        <div class="imgBox">
+            <img class="img lazy" lazysrc="${item.url}"
+                 src="/images/x.png"
+                 alt="${item.memo1}"></div>
+    <#--<div class="content">-->
+    <#--&lt;#&ndash;<p class="title">${item.memo1}</p>&ndash;&gt;-->
+    <#--&lt;#&ndash;<div class="pub"><span></span> </div>&ndash;&gt;-->
+    <#--&lt;#&ndash;<div class="like"><i></i><span>100</span></div>&ndash;&gt;-->
+    <#--</div>-->
+    </div>
 </#list>
 </div>
 
 <#--<div class='footer'>-->
-    <#--<a href="/">-->
-        <#--<div class='tab'>-->
-            <#--<div class="home active"></div>-->
-            <#--<p class="active">首页</p></div>-->
-    <#--</a>-->
-    <#--<a href="/category">-->
-        <#--<div class='tab'>-->
-            <#--<div class="dis"></div>-->
-            <#--<p>品味</p></div>-->
-    <#--</a>-->
+<#--<a href="/">-->
+<#--<div class='tab'>-->
+<#--<div class="home active"></div>-->
+<#--<p class="active">首页</p></div>-->
+<#--</a>-->
+<#--<a href="/category">-->
+<#--<div class='tab'>-->
+<#--<div class="dis"></div>-->
+<#--<p>品味</p></div>-->
+<#--</a>-->
 <#--</div>-->
 <#--<a href="/" class="go-home">返回首页</a>-->
 <a href="/" class="go-home">返回首页</a>

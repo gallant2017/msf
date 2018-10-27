@@ -3,6 +3,7 @@ package zone.msf.services.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import zone.msf.dao.mapper.PVCountMapper;
 import zone.msf.dao.mapper.TopicMapper;
 import zone.msf.entity.TopicDto;
 import zone.msf.entity.TopicImgDto;
@@ -24,6 +25,8 @@ public class TopicService implements ITopicService {
     @Autowired
     TopicMapper topicMapper;
 
+    @Autowired
+    PVCountMapper pvCountMapper;
 
     @Override
     public List<TopicDto> getIndexTopicList(int pageIndex, int pageSize) {
@@ -79,6 +82,11 @@ public class TopicService implements ITopicService {
     public List<TopicDto> getHotList() {
         List<TopicDto> lst = topicMapper.GetHotList();
         return fixList(lst);
+    }
+
+    @Override
+    public void AddPV(String ip, int position) {
+        pvCountMapper.AddPV(ip,position);
     }
 
     private int ensureCategoryId(int categoryId) {

@@ -252,7 +252,7 @@ a {
     height: 35px;
     outline: none;
     border-radius: 2px 0 0 2px;
-    border: 2px solid #1a8474;
+    border: 2px solid #f75d84;
     text-indent: 1em;
     float: left;
 }
@@ -262,7 +262,7 @@ a {
     height: 39px;
     padding: 0 15px;
     border-radius: 0 2px 2px 0;
-    background-color: #1a8474;
+    background-color: #f75d84;
     color: #fff;
     float: left;
     cursor: pointer;
