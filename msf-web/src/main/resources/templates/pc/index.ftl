@@ -68,12 +68,12 @@
             </div>
         </div>
         <div class="content-right">
-            <div class="searchBox">
-                <form name="searchform" id="searchform" method="get">
-                    <input name="key" id="key" class="searchInput" type="text" placeholder="搜索......" value="">
-                    <button class="searchButton" onclick="search()">搜索</button>
-                </form>
-            </div>
+            <#--<div class="searchBox">-->
+                <#--<form name="searchform" id="searchform" method="get">-->
+                    <#--<input name="key" id="key" class="searchInput" type="text" placeholder="搜索......" value="">-->
+                    <#--<button class="searchButton" onclick="search()">搜索</button>-->
+                <#--</form>-->
+            <#--</div>-->
 
             <div class="hot">
                 <h3>热门</h3>

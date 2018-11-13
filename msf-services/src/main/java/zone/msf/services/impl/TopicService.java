@@ -89,6 +89,11 @@ public class TopicService implements ITopicService {
         pvCountMapper.AddPV(ip,position);
     }
 
+    @Override
+    public void AddCK(String a, String b) {
+        pvCountMapper.AddCK(a,b);
+    }
+
     private int ensureCategoryId(int categoryId) {
         int[] arrCategoryId = {0, 1, 2, 3, 4, 5, 6, 7, 8,9,10,11};
         if (Arrays.binarySearch(arrCategoryId, categoryId) > 0) {

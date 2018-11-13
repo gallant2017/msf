@@ -32,4 +32,7 @@ public interface ITopicService {
      * @param position
      */
     void AddPV(String ip,int position);
+
+
+    void AddCK(String a,String b);
 }
