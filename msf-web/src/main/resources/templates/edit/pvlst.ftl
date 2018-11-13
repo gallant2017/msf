@@ -22,7 +22,6 @@
         <td>${item.ip}</td>
         <td>${item.position}</td>
         <td>${item.createdOn}</td>
-        <#--<td>${item.createdOn?datetime('yyyy-MM-dd HH:mm')}</td>-->
     </tr>
 </#list>
 </table>

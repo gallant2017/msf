@@ -12,7 +12,7 @@
         me.getList();
         $(window).scroll(function () {
             var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
-            if (($(document).height() - 30) <= totalheight) {
+            if (($(document).height() - 150) <= totalheight) {
                 if (me.hasMore && !me.isLoading) {
                     me.getList();
                 }
@@ -74,16 +74,6 @@
         if (lst.length < me.s) {
             me.hasMore = false;
         }
-        // if (me.p == 1) {
-        //     $(window).scroll(function () {
-        //         var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
-        //         if (($(document).height() - 30) <= totalheight) {
-        //             if (me.hasMore && !me.isLoading) {
-        //                 me.getList();
-        //             }
-        //         }
-        //     });
-        // }
         $(".loading").hide();
         me.p++;
     }
